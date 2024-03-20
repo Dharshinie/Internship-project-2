@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Registration Form</title>
+<style>
+    .bg-container{
+        background-image:linear-gradient(rgb(113, 249, 126),rgb(104, 226, 190),rgb(47, 36, 109),rgb(233, 121, 65));
+        min-height: 100vh;
+        background-size: cover;
+        padding: 29px;
+    }
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+  }
+  .container {
+    max-width: 400px;
+    margin: 50px auto;
+    background-image: linear-gradient(rgb(146, 64, 187),rgb(184, 227, 253),rgb(244, 136, 229),rgb(241, 243, 147));
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-top: 30px ;
+    min-height: 100%;
+  }
+  h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight: bold;
+  }
+  input[type="text"],
+  input[type="email"],
+  input[type="password"]{
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+  }
+  
+  input[type="submit"] {
+    background-color: #4caf50;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+  }
+  input[type="submit"]:hover {
+    background-color: #45a049;
+  }
+</style>
+</head>
+<body>
+    <div class="bg-container">
+    <div class="container">
+  <h2>Registration Form</h2>
+  <form action="#" method="post" onsubmit="return validateForm()">
+    <input type="text" name="fullname" placeholder="Full Name" required>
+    <input type="email" name="email" placeholder="Email" required>
+    <input type="password" name="password" placeholder="Password" required>
+    
+    <input type="submit" value="Register">
+  </form>
+</div>
+</div>
+<script>
+function validateForm() {
+  var fullname = document.forms["registrationForm"]["fullname"].value;
+  var email = document.forms["registrationForm"]["email"].value;
+  var password = document.forms["registrationForm"]["password"].value;
+  
+  if (fullname == "") {
+    alert("Full Name must be filled out");
+    return false;
+  }
+  
+  if (email == "") {
+    alert("Email must be filled out");
+    return false;
+  }
+
+  if (password == "") {
+    alert("Password must be filled out");
+    return false;
+  }
+
+  
+}
+</script>
+</body>
+</html>
